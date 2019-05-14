@@ -1,78 +1,105 @@
 def return_10()
   return(10)
 end
-
 p return_10()
 
 def add(num1, num2)
   return num1 + num2
 end
-
 p add(1, 2)
 
 def subtract(num1, num2)
   return num1 - num2
 end
-
 p subtract(10, 5)
 
 def multiply(num1, num2)
   return num1 * num2
 end
-
 p multiply(4, 2)
 
 def divide(num1, num2)
   return num1 / num2
 end
-
 p divide(10, 2)
 
 def length_of_string(string)
   return string.length
-
-  #length_of_string = length_of_string( test_string )
-  #assert_equal( 21, length_of_string )
 end
-p length_of_string('A string of length 21')
+p length_of_string("A string of length 21")
 
-def can_join_two_strings(string_1, string_2)
+def join_string(string_1, string_2)
+  return "#{string_1}#{string_2}"
+end
 string_1 = "Mary had a little lamb, "
 string_2 = "its fleece was white as snow"
-return "#{string_1}#{string_2}"
+p join_string(string_1, string_2)
+
+def add_string_as_number(str1, str2)
+  return str1.to_i + str2.to_i
 end
+p add_string_as_number( "1", "2" )
 
-p can_join_two_strings()
-
-def can_add_numbers_when_given_strings()
-  return "1".to_i + "2".to_i
-end
-
-p can_add_numbers_when_given_strings()
-
-def number_to_full_name__month_1()
-  case month
+def number_to_full_month_name(month_num)
+  case month_num
   when 1
     return "January"
+  when 2
+    return "February"
   when 3
     return "March"
   when 4
     return "April"
+  when 5
+    return "May"
+  when 6
+    return "June"
+  when 7
+    return "July"
+  when 8
+    return "August"
   when 9
     return "September"
   when 10
     return "October"
-  else
-    return
+  when 11
+    return "November"
+  when 12
+    return "December"
   end
 end
+p number_to_full_month_name( 1 )
+p number_to_full_month_name( 3 )
+p number_to_full_month_name( 9 )
 
-def test_number_to_full_name__month_1()
-  result = number_to_full_month_name( 1 )
-  assert_equal( "January", result )
+def number_to_short_month_name(month_num)
+  case month_num
+  when 1
+    return "Jan"
+  when 2
+    return "Feb"
+  when 3
+    return "Mar"
+  when 4
+    return "Apr"
+  when 5
+    return "May"
+  when 6
+    return "Jun"
+  when 7
+    return "Jul"
+  when 8
+    return "Aug"
+  when 9
+    return "Sep"
+  when 10
+    return "Oct"
+  when 11
+    return "Nov"
+  when 12
+    return "Dec"
+  end
 end
-
-def test_number_to_full_name__month_3()
-  result = number_to_full_month_name( 3 )
-  assert_equal( "March", result )
-end
+p number_to_short_month_name( 1 )
+p number_to_short_month_name( 4 )
+p number_to_short_month_name( 10 )
